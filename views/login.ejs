@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css-files/login-signup.css">
+</head>
+
+<body>
+  <div class="container login-form-container">
+    <% if(err){%>
+      <div id="error">
+        <h1>
+          <%=message%>
+        </h1>
+      </div>
+      <% }%>
+
+        <div class="form-container">
+          <form method="post" action="/login">
+            <h2 class="login-form-label">Email</h2>
+            <input class="login-form-input" required name="email" placeholder="Email" />
+            <h2 class="login-form-label">Password</h2>
+            <input class="login-form-input" required name="password" type="password" placeholder="Password">
+            <input class="button login-form-button" type="submit" value="LOGIN" />
+            <p id="paraline" >Have trouble logging? <br><a id="anchor1" href="/forgotPassword"> Forgot Password? </a></p>
+          </form>
+          <p id="paraline">Not Registered Yet? <a id="anchor" href="/signup">Register Now!</a></p>
+        </div>
+  </div>
+</body>
+<script>
+  var errorDiv = document.getElementById("error");
+  setTimeout(function () {
+    errorDiv.style.display = "none";
+  }, 5000)
+</script>
+
+</html>

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+
+#header {
+  font-size: 80px;
+}
+
+#paraline {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+#anchor {
+  font-size: 30px;
+  color: darkblue;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+#anchor1 {
+  padding-top: 10px;
+  font-size: 30px;
+  color: darkblue;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+#tag {
+  font-family: "Montserrat", sans-serif;
+  color: darkred;
+  font-size: 19px;
+}
+
+#forgo {
+  font-family: "Montserrat", sans-serif;
+  color: darkblue;
+  font-size: 35px;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #ff4b2b;
+}
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+form {
+  background-color: #ffffff;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.login-form-container {
+  height: 60%;
+  width: 30%;
+}
+.signup-form-container {
+  height: 90%;
+  width: 40%;
+}
+
+.login-form-input {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  font-size: 1.5rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+
+.sign-form-input {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  font-size: 20px;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+.login-form-button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 45px;
+  width: 70%;
+  letter-spacing: 2px;
+}
+
+.login-form-label{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	text-align: left;
+	color: rgba(0, 0, 0, 0.699);
+}
+
+.forgot-password-container{
+	height: 40%;
+	width: 30%;
+}

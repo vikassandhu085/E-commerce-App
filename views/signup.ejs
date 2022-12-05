@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css-files/login-signup.css">
+</head>
+
+<body>
+  <div class="signup-form-container">
+    <% if(err){%>
+      <div id="error">
+        <h1>
+          <%= message%>
+        </h1>
+      </div>
+      <% }%>
+        <div>
+          <form method="post" action="/signup" enctype="multipart/form-data">
+            <h3 class="login-form-label">Name</h2>
+            <input class="sign-form-input" required name="username" placeholder="Type your Name" />
+            <h3 class="login-form-label">Email</h3>
+            <input class="sign-form-input" required name="email" placeholder="Type your email" />
+            <h3 class="login-form-label">Password</h3>
+            <input class="sign-form-input" required name="password" type="password" placeholder="Type password" />
+            <h3 class="login-form-label">Confirm Password</h3>
+            <input class="sign-form-input" required name="rePassword" placeholder="Confirm password" />
+            <h3 class="login-form-label">Choose Your Profile Picture</h3>
+            <input class="sign-form-input" required name="image" type="file" id="image" placeholder="Add your Profile">
+            <input class="button login-form-button" type="submit" value="SIGNUP" />
+            <p id="paraline"> Already Registered? <a id="anchor" href="/login">Login here!</a> </p>
+          </form>
+        </div>
+  </div>
+</body>
+<script>
+  var errorDiv = document.getElementById("error");
+  setTimeout(function () {
+    errorDiv.style.display = "none";
+  }, 5000)
+</script>
+
+</html>

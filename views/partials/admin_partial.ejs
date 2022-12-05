@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css-files/ecom.css">
+</head>
+
+<body>
+    <div>
+        <div>
+            <img id="img" src="<%= data.image %>" height="400" width="300" />
+
+            <h2 id="hello">Hello <%= data.username %>
+            </h2>
+
+        </div>
+        <%if(data.username!=="guest"){%>
+
+            <a href="/logout"><button class="button" class="logout">LOGOUT</button></a>
+
+            <a href="/addProduct"><button class="button" class="mycartBtn">Add Product</button></a>
+
+            <a href="/changePassword"><button class="button" class="changePassword">CHANGE PASSWORD</button></a>
+
+            <%} else {%>
+
+                <a href="/login"><button class="button" class="login">LOGIN</button></a>
+
+                <% } %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <div class="header-container">
+    <%- include("partials/header.ejs",{data:data}) %>
+      <link rel="stylesheet" href="/css-files/ecom.css">
+      <div class="welcome-title">
+        <h1 id="welcome"> Welcome to <h1 class="welcome-italic">Alibaba</h1>
+        </h1>
+      </div>
+  </div>
+</head>
+
+<body>
+  <% if(err){%>
+    <div id="error">
+      <h1>
+        <%=message%>
+      </h1>
+    </div>
+    <% }%>
+
+      <div class="card">
+        <h1 id="text">Trending products</h1>
+        <div class="itemContainer">
+          <% items.forEach(function(item){%>
+            <div class="product-container">
+              <div class="item-image-div">
+                <img class="item-image" src="<%=item.itemImage%>">
+              </div>
+              <div class="item-info-div">
+                <h3 id="item-title">
+                  <%= item.itemName %>
+                </h3>
+                <div class="item-btns-div">
+                  <button class="descBtn">Description</button>
+                  <button id="<%=item._id%>" class="cartBtn">Add To Cart</button>
+                </div>
+                <div class="item-desc">
+                  <h2 class="item-title"> Price : <%= item.itemPrice %>
+                  </h2>
+                  <p id="description">
+                    <%= item.itemDescription %>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <%})%>
+        </div>
+        <div class="show-more-div">
+          <form method="get" action="/load-more">
+            <button class="viewmore">Show more</button>
+          </form>
+        </div>
+      </div>
+</body>
+<script src="ecom.js">
+  var errorDiv = document.getElementById("error");
+  setTimeout(function () {
+    errorDiv.style.display = "none";
+  }, 5000)
+</script>
+
+</html>

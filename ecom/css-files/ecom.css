@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@import url("https://fonts.googleapis.com/css?family=Tangerine:400,800");
+
+body {
+  background: #f6f5f7;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+.header-container{
+	display: flex;
+}
+
+.cartBtn {
+  position: relative;
+  right: 8%;
+  bottom: 6%;
+  border-radius: 20px;
+  border: 1px solid #363945;
+  background-color: #363945;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cartBtn:hover {
+  background-color: #ffffff;
+  color: #363945;
+}
+
+.descBtn {
+  position: relative;
+  left: 9%;
+  border-radius: 20px;
+  border: 1px solid #a09998;
+  background-color: #a09998;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.descBtn:hover {
+  background-color: #ffffff;
+  color: #a09998;
+}
+
+#header {
+  font-size: 80px;
+}
+
+#welcome {
+  font-size: 50px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  top: 17%;
+  left: 30%;
+}
+
+.welcome-italic {
+  font-family: "Tangerine", serif;
+  font-size: 50px;
+  text-align: center;
+  top: 17%;
+  left: 30%;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #ff4b2b;
+}
+
+.product-container{
+  background-color: #ffffff;
+  display: flex;
+  width: 80%;
+  padding: 50px;
+  margin: 50px auto;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.product-container .item-image-div{
+  width: 50%;
+  height: 100%;
+}
+.product-container .item-info-div{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product-container .item-btns-div {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.product-container .item-desc {
+  width: 100%;
+  height: 100%;
+}
+
+.item-title{
+  font-size: 3rem;
+}
+
+#text {
+  text-align: center;
+}
+
+.viewmore {
+  position: relative;
+  left: 44%;
+  top: 10%;
+  align-self: center;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: darkblue;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.viewmore:hover {
+  background-color: whitesmoke;
+  color: darkblue;
+}
+
+#img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.header-image{
+	display: flex;
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 250px;
+	height: 250px;
+}
+
+.header-btns{
+	position: absolute;
+	right: 20px;
+	top: 50px;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.welcome-title{
+	display: flex;
+	height: 300px;
+	width: 1500px;
+	align-items: center;
+	justify-content: center;
+}
+
+.welcome-italic{
+	margin-left: 15px;
+	font-size: 5rem;
+}
+
+.item-image {
+  max-width: 680px;
+  max-height: 680px;
+}
+
+.mycartBtn {
+  position: absolute;
+  top: 3%;
+  right: 26%;
+}
+
+.adminUpdateBtn {
+  position: relative;
+  left: 25%;
+  bottom: 12%;
+  border-radius: 20px;
+  border: 1px solid #264e36;
+  background-color: #264e36;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.adminUpdateBtn:hover {
+  background-color: #ffffff;
+  color: #264e36;
+}
+
+.quantity {
+  font-family: "Montserrat", sans-serif;
+}
+
+.plusBtn {
+  position: relative;
+  bottom: 7%;
+  right: 9%;
+  border-radius: 20px;
+  border: 1px solid #264e36;
+  background-color: #264e36;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.plusBtn:hover {
+  background-color: #ffffff;
+  color: #264e36;
+}
+
+.minusBtn {
+  position: relative;
+  left: 9%;
+  bottom: 10.5%;
+  border-radius: 20px;
+  border: 1px solid #264e36;
+  background-color: #264e36;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.minusBtn:hover {
+  background-color: #ffffff;
+  color: #264e36;
+}

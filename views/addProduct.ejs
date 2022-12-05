@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css-files/login-signup.css">
+</head>
+
+<body>
+  <div>
+
+    <% if(err){%>
+      <div id="error">
+        <h1>
+          <%=message%>
+        </h1>
+      </div>
+      <% }%>
+
+        <div>
+
+          <form method="post" action="/addProduct" enctype="multipart/form-data">
+            <input required name="itemName" placeholder="Type Name of Product" />
+            <input required name="itemPrice" placeholder="Type Price of Product" />
+            <input required name="itemDescription" placeholder="Type Description of Product" />
+            <input required name="itemQuantity" placeholder="Type Quantity of Product" />
+            <input required name="image" type="file" id="image" placeholder="Product image">
+            <input class="button" type="submit" value="ADD PRODUCT" />
+          </form>
+          <p id="paraline"> want to Add Product later? <a id="anchor" href="/">Back to Homepage!</a> </p>
+        </div>
+  </div>
+</body>
+
+<script>
+  var errorDiv = document.getElementById("error");
+  setTimeout(function () {
+    errorDiv.style.display = "none";
+  }, 5000)
+</script>
+
+</html>
