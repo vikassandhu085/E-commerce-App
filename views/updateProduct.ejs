@@ -6,7 +6,6 @@
 
 <body>
   <div>
-
     <% if(err){%>
       <div id="error">
         <h1>
@@ -14,18 +13,21 @@
         </h1>
       </div>
       <% }%>
-
         <div>
-
           <form method="post" action="/updateProduct" enctype="multipart/form-data">
-            <input required name="itemName" value="<%=data.itemName%>" placeholder="Type Name of Product" />
-            <input required name="itemPrice" value="<%=data.itemPrice%>" placeholder="Type Price of Product" />
-            <input required name="itemDescription" value="<%=data.itemDescription%>" placeholder="Type Description of Product" />
-            <input required name="itemQuantity" value="<%=data.itemQuantity%>" type="number" placeholder="Type Quantity of Product" />
-            <input name="image" type="file" id="image" placeholder="Product image">
-            <input class="button" type="submit" value="UPDATE PRODUCT" />
+            <h3 class="login-form-label">Product Name</h2>
+            <input  class="sign-form-input" required name="itemName" value="<%=data.itemName%>" placeholder="Type Name of Product" />
+            <h3 class="login-form-label">Product Price</h2>
+            <input  class="sign-form-input" required name="itemPrice" value="<%=data.itemPrice%>" placeholder="Type Price of Product" />
+            <h3 class="login-form-label">Product Description</h2>
+            <input  class="sign-form-input" required name="itemDescription" value="<%=data.itemDescription%>" placeholder="Type Description of Product" />
+            <h3 class="login-form-label">Product Quantity</h2>
+            <input  class="sign-form-input" required name="itemQuantity" value="<%=data.itemQuantity%>" type="number" placeholder="Type Quantity of Product" />
+            <h3 class="login-form-label">Product Image</h2>
+            <input  class="sign-form-input" name="image" type="file" id="image" placeholder="Product image">
+            <input class="button login-form-button" type="submit" value="UPDATE PRODUCT" />
           </form>
-          <p id="paraline"> want to Update Product later? <a id="anchor" href="/">Back to Homepage!</a> </p>
+          <p id="paraline"> want to Update Product later? <a id="anchor" href="/guest">Back to Homepage!</a> </p>
         </div>
   </div>
 </body>

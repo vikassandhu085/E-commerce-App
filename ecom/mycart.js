@@ -3,34 +3,34 @@ function start()
 {
   var container = document.getElementsByClassName("itemContainer")[0]
   var products = container.children;
-  console.log(products.length)
+  console.log(products, 'my-cart-products');
   
-  for(var j = 0 ; j < products.length-1 ; j++)
+  for(var j = 0 ; j < products.length ; j++)
   {
-    var deleteBtn = products[j].children[3]
-    var plusBtn = products[j].children[5]
-    var minusBtn = products[j].children[6]
+    var deleteBtn = products[j].children[1].children[1].children[1];
+    var plusBtn = products[j].children[1].children[2].children[0];
+    var minusBtn = products[j].children[1].children[2].children[2];
     
     minusBtn.addEventListener("click",minusQuantityOfItem)
     plusBtn.addEventListener("click",plusQuantityOfItem)
     deleteBtn.addEventListener("click",deleteItemFromCart)
   }
-  if(products.length>1)
+  if(products.length)
   {
-  for(var j = 0 ; j < products.length-1 ; j++)
+  for(var j = 0 ; j < products.length ; j++)
   {
-    var itemDescription = products[j].children[7].style.display = "none"
+    var itemDescription = products[j].children[1].children[3].style.display = "none"
   }
 
-  for(var j = 0 ; j < products.length-1 ; j++)
+  for(var j = 0 ; j < products.length ; j++)
   {
     
-    var itemDescriptionBtn = products[j].children[2]
+    var itemDescriptionBtn = products[j].children[1].children[1].children[0]
     
     itemDescriptionBtn.addEventListener("click",function(event)
     {
-      
-      var description = event.target.parentNode.children[7]
+      console.log(event.target.parentNode, 'descbtn-target');
+      var description = event.target.parentNode.parentNode.children[3]
       
       if(description.style.display === "none")
       {
@@ -72,8 +72,8 @@ function deleteItemFromCart(event)
 function plusQuantityOfItem(event)
 {
   var id = event.target.id;
-  var quantity = event.target.parentNode.children[4].children[0]
-  
+  var quantity = event.target.parentNode.children[1].children[0]
+  console.log(quantity, 'quaqua')
   var request = new XMLHttpRequest()
   request.open("post","/plusQuantity")
   request.setRequestHeader("Content-type","application/json")
@@ -98,7 +98,7 @@ function plusQuantityOfItem(event)
 function minusQuantityOfItem (event)
 {
   var id = event.target.id;
-  var quantity = event.target.parentNode.children[4].children[0]
+  var quantity = event.target.parentNode.children[1].children[0]
 
   var request = new XMLHttpRequest()
   request.open("post","/minusQuantity")

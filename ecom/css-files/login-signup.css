@@ -49,6 +49,7 @@ body {
 
 #forgo {
   font-family: "Montserrat", sans-serif;
+  text-align: left;
   color: darkblue;
   font-size: 35px;
 }
@@ -63,11 +64,15 @@ h2 {
 }
 
 .button {
+  font-size: 15px;
+  font-weight: bold;
   border-radius: 20px;
+  font-family: "Montserrat", sans-serif;
   border: 1px solid #ff4b2b;
   background-color: #ff4b2b;
   color: #ffffff;
   cursor: pointer;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -145,4 +150,18 @@ form {
 .forgot-password-container{
 	height: 40%;
 	width: 30%;
+}
+
+.change-password-container{
+  height: 40%;
+  width: 30%;
+}
+
+.change-password-title{
+  margin-bottom: 10px;
+  color: darkblue;
+}
+
+.change-password-footer{
+  margin-top: 60px;
 }

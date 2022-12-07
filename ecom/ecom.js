@@ -25,7 +25,7 @@ function start()
         }
         else if(request.status === 200)
         {
-          window.location.href="/"
+          window.location.href="/guest"
         }
         else if(request.status === 402)
         {

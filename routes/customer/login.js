@@ -47,7 +47,7 @@ router.route("/").get(function(req,res)
            req.session.isLoggedIn = true;
            req.session.user = user;
            req.session.email = user.email;
-           res.redirect("/");
+           res.redirect("/guest");
         
           }
           else 

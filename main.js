@@ -37,8 +37,11 @@ app.set("view engine", "ejs");
 const db = require("./database");
 db.init();
 
+const landingPage = require("./routes/admin/landingPage");
+app.use("/", landingPage);
+
 const homepage = require("./routes/admin/homepage");
-app.use("/", homepage);
+app.use("/guest", homepage);
 
 const signup = require("./routes/customer/signup");
 app.use("/signup", signup);

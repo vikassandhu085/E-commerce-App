@@ -33,7 +33,7 @@ router.get('/',function(req,res) {
     else
     {
 
-      res.render("ecom.ejs",{data:{username:"guest",image:"dummy.jpg"},items:items,err:false})
+      res.render("ecom.ejs",{data:{username:"guest",image:"dummy.png"},items:items,err:false})
     
     }
     

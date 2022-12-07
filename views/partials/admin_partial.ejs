@@ -5,27 +5,20 @@
 </head>
 
 <body>
-    <div>
-        <div>
+    <div class="header">
+        <div class="header-image">
             <img id="img" src="<%= data.image %>" height="400" width="300" />
-
-            <h2 id="hello">Hello <%= data.username %>
-            </h2>
-
         </div>
-        <%if(data.username!=="guest"){%>
-
-            <a href="/logout"><button class="button" class="logout">LOGOUT</button></a>
-
-            <a href="/addProduct"><button class="button" class="mycartBtn">Add Product</button></a>
-
-            <a href="/changePassword"><button class="button" class="changePassword">CHANGE PASSWORD</button></a>
-
+        <div class="header-btns">
+            <h2 id="hello">Hello <%= data.username %></h2>
+         <%if(data.username!=="guest"){%>
+            <a href="/logout"><button class="button common-btn" class="logout">LOGOUT</button></a>
+            <a href="/addProduct"><button class="button common-btn" class="mycartBtn">Add Product</button></a>
+            <a href="/changePassword"><button class="button common-btn" class="changePassword">CHANGE PASSWORD</button></a>
             <%} else {%>
-
-                <a href="/login"><button class="button" class="login">LOGIN</button></a>
-
+                <a href="/login"><button class="button common-btn" class="login">LOGIN</button></a>
                 <% } %>
+        </div>
     </div>
 </body>
 

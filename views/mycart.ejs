@@ -1,39 +1,57 @@
 <html>
+
 <head>
-<%- include("partials/cart.ejs",{data:data}) %>
-<link rel="stylesheet" href="/css-files/ecom.css" >
-<h1 id="welcome">Items in your bag</h1>
+  <%- include("partials/cart.ejs",{data:data}) %>
+    <link rel="stylesheet" href="/css-files/ecom.css">
+    <h1 id="welcome">Items in your bag</h1>
 </head>
+
 <body>
-<% if(err){%>
- <div id="error"><h1><%=message%></h1></div>
-<% }%>
- <div>
- 
-  <div class="itemContainer"  >
-  <% items.forEach(function(item){%>
-   <div class="products" >
-     <img class="image" src="<%=item.itemImage%>">
-     <h3> <%= item.itemName %> </h3>
-     
-     <button  class="descBtn" >Description</button>
-     <button id="<%=item._id%>"  class="cartBtn" >Delete</button>
-     
-     <h3 class="quantity"  >Quantity : <span><%=item.itemQuantity%></span></h3>
-     <button id="<%=item._id%>"  class="plusBtn" > + </button>
-     <button id="<%=item._id%>"  class="minusBtn" > - </button>
-     
-      <div>
-      <h2> price : <%= item.itemPrice %> </h2>
-      <p id="description"> <%= item.itemDescription %> </p>
+  <% if(err){%>
+    <div id="error">
+      <h1>
+        <%=message%>
+      </h1>
+    </div>
+    <% }%>
+      <div class="itemContainer">
+        <% items.forEach(function(item){%>
+          <div class="product-container">
+            <div class="item-image-div">
+              <img class="item-image" src="<%=item.itemImage%>">
+            </div>
+            <div class="item-info-div">
+              <h3>
+                <%= item.itemName %>
+              </h3>
+              <div class="item-btns-div">
+                <button class="button descBtn">Description</button>
+                <button id="<%=item._id%>" class="button cartBtn">Delete</button>
+              </div>
+              <div class="item-quantity-btns-div">
+                <button id="<%=item._id%>" class="button quant-Btn"> + </button>
+                <h3 class="quantity">Quantity : <span>
+                    <%=item.itemQuantity%>
+                  </span></h3>
+                <button id="<%=item._id%>" class="button quant-Btn"> - </button>
+              </div>
+              <div class="item-desc">
+                <h2 class="item-price"> price : <%= item.itemPrice %>
+                </h2>
+                <p class="item-description">
+                  <%= item.itemDescription %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <%})%>
       </div>
-   </div>
-  <%})%>
 </body>
-<script src="mycart.js" >
- var errorDiv=document.getElementById("error");
-  setTimeout(function(){
-  errorDiv.style.display="none";
-},5000)
+<script src="mycart.js">
+  var errorDiv = document.getElementById("error");
+  setTimeout(function () {
+    errorDiv.style.display = "none";
+  }, 5000)
 </script>
+
 </html>

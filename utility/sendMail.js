@@ -30,7 +30,6 @@ module.exports = function(email,recipientName, title,body,html,callback)
 })
 request
   .then(result => {
-    console.log(result, 'email-sent')
     callback();
   })
   .catch(err => {

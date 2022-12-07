@@ -1,16 +1,19 @@
 <html>
+
 <head>
-<link rel="stylesheet" href="/css-files/ecom.css" >
+    <link rel="stylesheet" href="/css-files/ecom.css">
 </head>
+
 <body>
-<div>
-<div>
-<img id="img" src="<%= data.image %>" height="400" width="300" />
-
-<h1 id="hello" >Hello <%= data.username %> </h1>
-
-</div>
-<a   href="/"><button  class="button"  class="logout" >Back To Home page</button></a>
-</div>
+    <div class="my-cart-header">
+        <div>
+            <img id="img" src="<%= data.image %>" height="400" width="300" />
+        </div>
+        <div class="my-cart-header-btn-and-name">
+            <h1 id="hello">Hello <%= data.username %></h1>
+            <a href="/guest"><button class="button common-btn back-to-home" class="logout">Back To Home page</button></a>
+        </div>
+    </div>
 </body>
+
 </html>

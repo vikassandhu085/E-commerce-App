@@ -17,7 +17,7 @@ router.route("/").get(function(req,res)
     }
     else
     {
-      res.redirect("/")
+      res.redirect("/guest")
     }
   })
 
@@ -56,7 +56,7 @@ router.route("/").get(function(req,res)
       {
         res.status(200)
         console.log(data);
-        res.redirect("/");
+        res.redirect("/guest");
       
       }).catch(function(err)
       {

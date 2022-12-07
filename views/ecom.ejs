@@ -20,7 +20,7 @@
     </div>
     <% }%>
 
-      <div class="card">
+      <div>
         <h1 id="text">Trending products</h1>
         <div class="itemContainer">
           <% items.forEach(function(item){%>
@@ -29,17 +29,17 @@
                 <img class="item-image" src="<%=item.itemImage%>">
               </div>
               <div class="item-info-div">
-                <h3 id="item-title">
+                <h3>
                   <%= item.itemName %>
                 </h3>
                 <div class="item-btns-div">
-                  <button class="descBtn">Description</button>
-                  <button id="<%=item._id%>" class="cartBtn">Add To Cart</button>
+                  <button class="button descBtn">Description</button>
+                  <button id="<%=item._id%>" class="button cartBtn">Add To Cart</button>
                 </div>
                 <div class="item-desc">
-                  <h2 class="item-title"> Price : <%= item.itemPrice %>
+                  <h2 class="item-price"> Price : <%= item.itemPrice %>
                   </h2>
-                  <p id="description">
+                  <p class="item-description">
                     <%= item.itemDescription %>
                   </p>
                 </div>
@@ -49,7 +49,7 @@
         </div>
         <div class="show-more-div">
           <form method="get" action="/load-more">
-            <button class="viewmore">Show more</button>
+            <button class="button view-more-btn">Show more</button>
           </form>
         </div>
       </div>

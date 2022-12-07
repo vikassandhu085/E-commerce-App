@@ -13,13 +13,13 @@
                 <%if(data.username!=="guest"){%>
                 <h2>Hello <%= data.username %>
                 </h2>
-                <a href="/logout"><button class="button">LOGOUT</button></a>
-                <a href="/myCart"><button class="button">My Cart</button></a>
-                <a href="/changePassword"><button class="button" >CHANGE PASSWORD</button></a>
+                <a href="/logout"><button class="button common-btn">LOGOUT</button></a>
+                <a href="/myCart"><button class="button common-btn">My Cart</button></a>
+                <a href="/changePassword"><button class="button common-btn" >CHANGE PASSWORD</button></a>
                 <%} else {%>
                     <h2>Hello <%= data.username %>
                     </h2>
-                    <a href="/login"><button class="button">LOGIN</button></a>
+                    <a href="/login"><button class="button common-btn">LOGIN</button></a>
                     <% } %>
             </div>
     </div>

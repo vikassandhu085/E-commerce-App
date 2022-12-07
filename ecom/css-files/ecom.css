@@ -12,18 +12,9 @@ body {
 }
 
 .cartBtn {
-  position: relative;
-  right: 8%;
-  bottom: 6%;
-  border-radius: 20px;
   border: 1px solid #363945;
   background-color: #363945;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .cartBtn:hover {
@@ -32,17 +23,9 @@ body {
 }
 
 .descBtn {
-  position: relative;
-  left: 9%;
-  border-radius: 20px;
   border: 1px solid #a09998;
   background-color: #a09998;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .descBtn:hover {
@@ -81,17 +64,22 @@ h2 {
 
 .button {
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  cursor: pointer;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   padding: 12px 45px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.button:hover {
+
+.common-btn{
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+}
+
+.common-btn:hover {
   background-color: #ffffff;
   color: #ff4b2b;
 }
@@ -134,30 +122,32 @@ h2 {
   height: 100%;
 }
 
-.item-title{
-  font-size: 3rem;
+.item-price{
+  font-size: 30px;
+}
+
+.item-description{
+  font-size: 20px;
 }
 
 #text {
   text-align: center;
 }
 
-.viewmore {
-  position: relative;
-  left: 44%;
-  top: 10%;
-  align-self: center;
-  border-radius: 20px;
+.show-more-div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.view-more-btn {
   border: 1px solid black;
   background-color: darkblue;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
-.viewmore:hover {
+.view-more-btn:hover {
   background-color: whitesmoke;
   color: darkblue;
 }
@@ -166,14 +156,12 @@ h2 {
   border-radius: 50%;
   height: 200px;
   width: 200px;
-  padding-left: 20px;
-  padding-top: 20px;
 }
 
 .header-image{
 	display: flex;
-	margin-top: 0px;
-	margin-left: 0px;
+	margin-top: 40px;
+	margin-left: 40px;
 	width: 250px;
 	height: 250px;
 }
@@ -182,17 +170,18 @@ h2 {
 	position: absolute;
 	right: 20px;
 	top: 50px;
-	width: 250px;
-	height: 250px;
+	width: 400px;
+	height: 320px;
 	display: flex;
 	align-items: center;
+  justify-content: space-around;
 	flex-direction: column;
 }
 
 .welcome-title{
 	display: flex;
 	height: 300px;
-	width: 1500px;
+	width: 1400px;
 	align-items: center;
 	justify-content: center;
 }
@@ -214,18 +203,9 @@ h2 {
 }
 
 .adminUpdateBtn {
-  position: relative;
-  left: 25%;
-  bottom: 12%;
-  border-radius: 20px;
   border: 1px solid #264e36;
   background-color: #264e36;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 .adminUpdateBtn:hover {
   background-color: #ffffff;
@@ -236,40 +216,45 @@ h2 {
   font-family: "Montserrat", sans-serif;
 }
 
-.plusBtn {
-  position: relative;
-  bottom: 7%;
-  right: 9%;
-  border-radius: 20px;
+.quant-Btn {
+  padding: 4px 40px;
+  font-size: 30px;
+  font-weight: normal;
   border: 1px solid #264e36;
   background-color: #264e36;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 5px 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
-.plusBtn:hover {
+.quant-Btn:hover {
   background-color: #ffffff;
   color: #264e36;
 }
 
-.minusBtn {
-  position: relative;
-  left: 9%;
-  bottom: 10.5%;
-  border-radius: 20px;
-  border: 1px solid #264e36;
-  background-color: #264e36;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 5px 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+
+.my-cart-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
 }
-.minusBtn:hover {
-  background-color: #ffffff;
-  color: #264e36;
+
+.my-cart-header-btn-and-name{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.back-to-home{
+  margin-top: 20px;
+}
+
+.item-quantity-btns-div{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+  justify-content: space-around;
 }

@@ -14,7 +14,7 @@ router.post("/",function(req,res)
     if(item)
     {  
        
-      if(item.itemQuantity>0)
+      if(item.itemQuantity>1)
       {
       cartModel.updateOne({_id:id},{$set:{itemQuantity:item.itemQuantity-1}}).then(function()
       {
